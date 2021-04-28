@@ -82,3 +82,9 @@ function mytheme_img_gallery_save( $post_id ) {
     }
      
 }
+function mytheme_admin_scripts() {
+     
+    wp_enqueue_script( 'mytheme-gallery-js', get_template_directory_uri() . '/custom-gallery.js', array('jquery'), null, true );
+     
+}
+add_action( 'admin_enqueue_scripts','mytheme_admin_scripts' );
